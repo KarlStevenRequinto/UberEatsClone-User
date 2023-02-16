@@ -16,6 +16,8 @@ const RestaurantDetailsScreen = () => {
             ${restaurant.deliveryFee} &#8226; {restaurant.minDeliveryTime}-
             {restaurant.maxDeliveryTime} minutes
           </Text>
+
+          <Text style={styles.menuTitle}>Menu</Text>
         </View>
       </View>
     );
@@ -55,5 +57,10 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 40,
     left: 10,
+  },
+  menuTitle: {
+    marginTop: 10,
+    fontSize: 18,
+    letterSpacing: 0.7,
   },
 });
