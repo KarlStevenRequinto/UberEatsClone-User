@@ -2,22 +2,12 @@ import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import restaurant from "../../../assets/data/restaurants.json";
 import { AntDesign } from "@expo/vector-icons";
 import { useState } from "react";
+import BasketDishItem from "../../Components/BasketDishItem";
 
 const resto = restaurant[0];
 const BasketScreen = () => {
   const [quantity, setQuantity] = useState(1);
 
-  const BasketDishItem = ({ basketDish }) => {
-    return (
-      <View style={styles.row}>
-        <View style={styles.qtyContainer}>
-          <Text>1</Text>
-        </View>
-        <Text style={{ fontWeight: "600" }}>{basketDish.name}</Text>
-        <Text style={{ marginLeft: "auto" }}>{basketDish.price}</Text>
-      </View>
-    );
-  };
   return (
     <View style={styles.page}>
       <Text style={styles.name}>{resto.name}</Text>

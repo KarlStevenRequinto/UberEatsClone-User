@@ -34,7 +34,7 @@ const RestaurantDetailsScreen = () => {
       <FlatList
         ListHeaderComponent={Header}
         data={restaurant.dishes}
-        renderItem={({ item }) => <DishListItem dish={item} />}
+        renderItem={({ item }) => <DishListItem dish={item}/>}
       />
     </View>
   );
@@ -50,9 +50,7 @@ const styles = StyleSheet.create({
   image: { width: "100%", aspectRatio: 5 / 3 },
   title: { fontSize: 35, fontWeight: "600", marginVertical: 10 },
   subtitle: { color: "grey", fontSize: 15 },
-  maring: {
-    margin: 10,
-  },
+
   iconContainer: {
     position: "absolute",
     top: 40,
