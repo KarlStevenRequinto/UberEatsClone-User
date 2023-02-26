@@ -2,13 +2,14 @@ import { StyleSheet, Text, View, Image, FlatList } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import restaurants from "../../../assets/data/restaurants.json";
 import DishListItem from "../../Components/DishListItem";
-import { useRoute } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 const restaurant = restaurants[0];
 
 const RestaurantDetailsScreen = () => {
   const route = useRoute();
+  const navigation = useNavigation();
   const id = route.params.id;
-  console.warn(id);
+ 
   const Header = () => {
     return (
       <View style={styles.page}>
@@ -33,6 +34,9 @@ const RestaurantDetailsScreen = () => {
         size={45}
         color="white"
         style={styles.iconContainer}
+        onPress={() => {
+          navigation.goBack;
+        }}
       />
 
       <FlatList
